@@ -7,6 +7,10 @@ public interface Constants {
     String CONSOLE_NAME = "console.name";
     String CONSOLE_ALIAS = "console.alias";
     String ENABLE_SECURITY = "enable.security";
+    String DEFAULT_ROLES = "default.roles";
+
+    String SECURED_CONSOLE_PID = "com.peergreen.webconsole.secured";
+    String UNSECURED_CONSOLE_PID = "com.peergreen.webconsole.unsecured";
 
     String WEBCONSOLE_EXTENSION = "webconsole.extension";
     String EXTENSION_POINT = "extension.point";
