@@ -1,5 +1,7 @@
 package com.peergreen.webconsole;
 
+import java.io.File;
+
 /**
  * @author Mohammed Boukada
  */
@@ -20,4 +22,6 @@ public interface Constants {
     String UI_CONTEXT = "ui.context";
 
     String REQUIRES_FILTER = "requires.filters";
+
+    String STORAGE_DIRECTORY = System.getProperty("user.dir") + File.separator + "peergreen" + File.separator + "storage" + File.separator+  "webconsole";
 }
