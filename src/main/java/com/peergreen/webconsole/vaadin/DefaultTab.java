@@ -1,4 +1,4 @@
-package com.peergreen.webconsole.tabs;
+package com.peergreen.webconsole.vaadin;
 
 import com.vaadin.event.LayoutEvents;
 import com.vaadin.server.ThemeResource;
