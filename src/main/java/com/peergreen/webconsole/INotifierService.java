@@ -1,10 +1,9 @@
 package com.peergreen.webconsole;
 
-import com.peergreen.webconsole.NotificationOverlay;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Component;
+import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.Window;
 
 /**
@@ -43,6 +42,8 @@ public interface INotifierService {
      */
     void addNotificationsButton(Button button, Window window, UI ui);
 
+    void addTasksBar(HorizontalLayout tasksBar, UI ui);
+
     /**
      * Hide scope button from menu
      * @param scope
@@ -77,4 +78,12 @@ public interface INotifierService {
      * @param notification
      */
     void addNotification(String notification);
+
+    void startTask(Object worker, String message, Long contentLength);
+
+    void updateTask(Object worker, Long bytesReceived);
+
+    void stopTask(Object worker);
+
+    void clearComponentsForUI(UI ui);
 }
