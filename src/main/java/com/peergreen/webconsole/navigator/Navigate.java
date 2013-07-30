@@ -1,4 +1,4 @@
-package com.peergreen.webconsole;
+package com.peergreen.webconsole.navigator;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -8,9 +8,7 @@ import java.lang.annotation.Target;
 /**
  * @author Mohammed Boukada
  */
-@Target(ElementType.TYPE)
+@Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ExtensionPoint {
-    String value();
-    String alias() default "";
+public @interface Navigate {
 }

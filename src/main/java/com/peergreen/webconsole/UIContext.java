@@ -1,19 +1,18 @@
 package com.peergreen.webconsole;
 
+import com.peergreen.webconsole.navigator.ViewNavigator;
 import com.vaadin.ui.UI;
 
 /**
- * Created with IntelliJ IDEA.
- * User: mohammed
- * Date: 28/05/13
- * Time: 15:54
- * To change this template use File | Settings | File Templates.
+ * @author Mohammed Boukada
  */
 public interface UIContext {
 
     ISecurityManager getSecurityManager();
 
     UI getUI();
+
+    ViewNavigator getViewNavigator();
 
     String getUIId();
 }
