@@ -10,15 +10,35 @@ public class UrlFragment {
 
     private static Pattern p = Pattern.compile("(/([^/]*))(/([^/]*))*");
 
+    /**
+     * Take a URL string and return the first fragment
+     * Example <br/>
+     * - Input : /frag1/frag2/frag3
+     * - return : /frag1
+     * @param s
+     * @return
+     */
     public static String getFirstFragment(String s) {
         Matcher m = p.matcher(s);
-        if (m.matches()) return m.group(1);
+        if (m.matches()) {
+            return m.group(1);
+        }
         return s;
     }
 
+    /**
+     * Take a URL string and sub the first fragment
+     * Example <br/>
+     * - Input : /frag1/frag2/frag3
+     * - return : /frag2/frag3
+     * @param s
+     * @return
+     */
     public static String subFirstFragment(String s) {
         Matcher m = p.matcher(s);
-        if (m.matches()) return s.substring(m.group(1).length());
+        if (m.matches()) {
+            return s.substring(m.group(1).length());
+        }
         return s;
     }
 }

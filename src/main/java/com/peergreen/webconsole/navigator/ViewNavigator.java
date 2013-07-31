@@ -7,7 +7,7 @@ import com.vaadin.ui.Component;
  */
 public interface ViewNavigator {
     void navigateTo(String path);
-    String getUrlOf(String extension);
+    String getLocation(String extension);
     NavigableModel getNavigableModel(String extension);
     void registerNavigableModel(Component component, NavigableModel navigableModel);
     void unregisterNavigableModel(Component component);
