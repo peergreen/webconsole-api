@@ -4,30 +4,34 @@ import com.peergreen.webconsole.navigator.ViewNavigator;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.TabSheet;
 
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  * @author Mohammed Boukada
  */
 public class SelectedTabListener implements TabSheet.SelectedTabChangeListener {
 
     private ViewNavigator viewNavigator;
-    private Component defaultTab;
+    private Map<Component, String> locations;
 
-    public SelectedTabListener(ViewNavigator viewNavigator, Component defaultTab) {
+    public SelectedTabListener(ViewNavigator viewNavigator) {
         this.viewNavigator = viewNavigator;
-        this.defaultTab = defaultTab;
+        this.locations = new ConcurrentHashMap<>();
+    }
+
+    public void addLocation(Component component, String location) {
+        locations.put(component, location);
+    }
+
+    public void removeLocation(Component component) {
+        if (locations.containsKey(component)) {
+            locations.remove(component);
+        }
     }
 
     @Override
     public void selectedTabChange(TabSheet.SelectedTabChangeEvent event) {
-        Component selectedTab = event.getTabSheet().getSelectedTab();
-        String location;
-        if (defaultTab.equals(selectedTab)) {
-            location = viewNavigator.getLocation(event.getSource().getClass().getName());
-        } else {
-            location = viewNavigator.getLocation(selectedTab.getClass().getName());
-        }
-        if (location != null) {
-            viewNavigator.navigateTo(location);
-        }
+        viewNavigator.navigateTo(locations.get(event.getTabSheet().getSelectedTab()));
     }
 }
