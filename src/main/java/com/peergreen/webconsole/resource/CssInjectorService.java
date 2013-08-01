@@ -13,18 +13,12 @@ public interface CssInjectorService {
      * @return Css handler
      * @throws IOException
      */
-    CssHandler inject(InputStream is) throws IOException;
+    CssHandle inject(InputStream is) throws IOException;
 
     /**
      * Inject css
      * @param cssContent css content
      * @return css handler
      */
-    CssHandler inject(String cssContent);
-
-    /**
-     * Remove css
-     * @param cssHandler
-     */
-    void remove(CssHandler cssHandler);
+    CssHandle inject(String cssContent);
 }
