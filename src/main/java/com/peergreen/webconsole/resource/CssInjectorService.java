@@ -1,16 +1,30 @@
 package com.peergreen.webconsole.resource;
 
-import org.osgi.framework.Bundle;
-
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
 
 /**
  * @author Mohammed Boukada
  */
 public interface CssInjectorService {
-    void add(Bundle bundle, InputStream is) throws IOException;
-    void add(Bundle bundle, String style);
-    void remove(Bundle bundle);
+    /**
+     * Inject css
+     * @param is css input stream
+     * @return Css handler
+     * @throws IOException
+     */
+    CssHandler inject(InputStream is) throws IOException;
+
+    /**
+     * Inject css
+     * @param cssContent css content
+     * @return css handler
+     */
+    CssHandler inject(String cssContent);
+
+    /**
+     * Remove css
+     * @param cssHandler
+     */
+    void remove(CssHandler cssHandler);
 }
