@@ -32,6 +32,8 @@ public class SelectedTabListener implements TabSheet.SelectedTabChangeListener {
 
     @Override
     public void selectedTabChange(TabSheet.SelectedTabChangeEvent event) {
-        viewNavigator.navigateTo(locations.get(event.getTabSheet().getSelectedTab()));
+        if (event.getTabSheet().isAttached()) {
+            viewNavigator.navigateTo(locations.get(event.getTabSheet().getSelectedTab()));
+        }
     }
 }
