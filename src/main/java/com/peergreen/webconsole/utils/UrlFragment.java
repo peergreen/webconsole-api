@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 /**
  * @author Mohammed Boukada
  */
-public class UrlFragment {
+public final class UrlFragment {
 
     private static Pattern p = Pattern.compile("(/([^/]*))(/([^/]*))*");
 
