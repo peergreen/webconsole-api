@@ -1,11 +1,5 @@
 package com.peergreen.webconsole;
 
-import com.vaadin.ui.Button;
-import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.UI;
-import com.vaadin.ui.Window;
-
 /**
  * Notifier service
  * @author Mohammed Boukada
@@ -22,68 +16,34 @@ public interface INotifierService {
     NotificationOverlay addOverlay(String caption, String text, String style);
 
     /**
-     * Add scope button reference
-     * @param scope
-     * @param button
-     * @param notify
-     */
-    void addScopeButton(Component scope, Button button, UI ui, boolean notify);
-
-    /**
-     * Remove scope button reference
-     * @param scope
-     */
-    void removeScopeButton(Component scope);
-
-    /**
-     * Add notifications buttons
-     * @param button
-     * @param window
-     */
-    void addNotificationsButton(Button button, Window window, UI ui);
-
-    void addTasksBar(HorizontalLayout tasksBar, UI ui);
-
-    /**
-     * Hide scope button from menu
-     * @param scope
-     */
-    void hideScopeButton(Component scope);
-
-    /**
-     * Remove badge from scope button in menu
-     * @param scope
-     */
-    void removeBadge(Component scope);
-
-    /**
-     * Increment badge in scope button in menu
-     * @param scope
-     */
-    void incrementBadge(Component scope);
-
-    /**
-     * Decrement badge in scope button in menu
-     * @param scope
-     */
-    void decrementBadge(Component scope);
-
-    /**
      * Close all overlays
      */
     void closeAll();
 
     /**
      * Add a notification
-     * @param notification
+     * @param notification notification message
      */
     void addNotification(String notification);
 
+    /**
+     * Start a task
+     * @param worker worker object
+     * @param message task message
+     * @param contentLength task length
+     */
     void startTask(Object worker, String message, Long contentLength);
 
+    /**
+     * Update running task
+     * @param worker worker object
+     * @param bytesReceived
+     */
     void updateTask(Object worker, Long bytesReceived);
 
+    /**
+     * Stop task
+     * @param worker worker object
+     */
     void stopTask(Object worker);
-
-    void clearComponentsForUI(UI ui);
 }
