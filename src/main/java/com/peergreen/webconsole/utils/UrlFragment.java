@@ -10,6 +10,10 @@ public final class UrlFragment {
 
     private static Pattern p = Pattern.compile("(/([^/]*))(/([^/]*))*");
 
+    private UrlFragment() {
+        // Prevent instantiation
+    }
+
     /**
      * Take a URL string and return the first fragment
      * Example <br/>
