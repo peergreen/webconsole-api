@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
+ * Css contribution service
  * @author Mohammed Boukada
  */
 public interface CssInjectorService {

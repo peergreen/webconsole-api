@@ -3,12 +3,42 @@ package com.peergreen.webconsole.navigator;
 import com.vaadin.ui.Component;
 
 /**
+ * Vaadin view navigator
  * @author Mohammed Boukada
  */
 public interface ViewNavigator {
+    /**
+     * Navigate to the given path
+     * @param path path to extension
+     */
     void navigateTo(String path);
-    void registerNavigableModel(Component component, NavigableModel navigableModel);
-    void unregisterNavigableModel(Component component);
+
+    /**
+     * Register an extension as navigable
+     * @param extension extension object
+     * @param navigableModel extension's navigable model
+     */
+    void registerNavigableModel(Component extension, NavigableModel navigableModel);
+
+    /**
+     * Unregister an extension
+     * @param extension extension object
+     */
+    void unregisterNavigableModel(Component extension);
+
+    /**
+     * Get the location of an extension
+     * @param extension wanted extension. <br/>
+     *                  This parameter could be the extension class name or one of its own extension point.
+     * @return path to the extension
+     */
     String getLocation(String extension);
+
+    /**
+     * Get the navigable model of an extension
+     * @param extension wanted extension. <br />
+     *                  This parameter could be the extension class name or one of its own extension point.
+     * @return extension's navigable model
+     */
     NavigableModel getNavigableModel(String extension);
 }

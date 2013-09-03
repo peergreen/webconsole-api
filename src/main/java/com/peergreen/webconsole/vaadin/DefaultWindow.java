@@ -8,6 +8,7 @@ import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.Window;
 
 /**
+ * Default Vaadin window component
  * @author Mohammed Boukada
  */
 public class DefaultWindow extends Window {
@@ -21,9 +22,9 @@ public class DefaultWindow extends Window {
         VerticalLayout main = new VerticalLayout();
         main.setSpacing(true);
         main.setMargin(true);
-        main.setStyleName("confirm-dialog");
+        main.setStyleName("default-window");
 
-        content.addStyleName("confirm-dialog-message");
+        content.addStyleName("default-window-content");
         main.addComponent(content);
 
         HorizontalLayout footer = new HorizontalLayout();

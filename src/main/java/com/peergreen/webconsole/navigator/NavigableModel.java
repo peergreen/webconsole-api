@@ -3,33 +3,59 @@ package com.peergreen.webconsole.navigator;
 import java.lang.reflect.Method;
 
 /**
+ * Navigable extension descriptor <br />
+ * An {@link com.peergreen.webconsole.Extension} is navigable if it
+ * is annotated with {@link com.peergreen.webconsole.navigator.Navigable}
  * @author Mohammed Boukada
  */
 public class NavigableModel {
 
     private NavigableModel parent;
     private String alias;
-    private Object object;
+    private Object extension;
     private Method callbackMethod;
 
-    public NavigableModel(NavigableModel parent, String alias, Object object, Method method) {
+    /**
+     * Create a navigable model
+     * @param parent parent navigable model
+     * @param alias extension alias
+     * @param extension extension object
+     * @param method called method to navigate
+     */
+    public NavigableModel(NavigableModel parent, String alias, Object extension, Method method) {
         this.parent = parent;
         this.alias = alias;
-        this.object = object;
+        this.extension = extension;
         this.callbackMethod = method;
 
     }
 
-    public Object getObject() {
-        return object;
+    /**
+     * Get navigable extension
+     * @return navigable extension
+     */
+    public Object getExtension() {
+        return extension;
     }
 
+    /**
+     * Get the method to call to navigate through the extension <br/>
+     * This method should annotated with {@link com.peergreen.webconsole.navigator.Navigate}
+     * @return called method to navigate
+     */
     public Method getCallbackMethod() {
         return callbackMethod;
     }
 
+    /**
+     * Get the full path, including parent(s) alias, to the navigable extension
+     * @return full path
+     */
     public String getFullPath() {
-        if (parent != null) return parent.getFullPath() + alias;
-        else return alias;
+        if (parent != null) {
+            return parent.getFullPath() + alias;
+        } else {
+            return alias;
+        }
     }
 }
