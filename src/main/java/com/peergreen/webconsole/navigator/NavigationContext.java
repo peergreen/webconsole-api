@@ -7,7 +7,22 @@ import java.util.Map;
  * @author Mohammed Boukada
  */
 public interface NavigationContext {
+
+    /**
+     * Get current path
+     * @return current path
+     */
     String getPath();
+
+    /**
+     * Set path
+     * @param path path
+     */
     void setPath(String path);
+
+    /**
+     * Get navigation properties
+     * @return navigation properties
+     */
     Map<String, Object> getProperties();
 }
