@@ -1,5 +1,7 @@
 package com.peergreen.webconsole;
 
+import java.util.List;
+
 /**
  * Web console security manager
  * @author Mohammed Boukada
@@ -18,7 +20,7 @@ public interface ISecurityManager {
      * @param roles given roles
      * @return True is user the given roles, false otherwise.
      */
-    boolean isUserInRoles(String[] roles);
+    boolean isUserInRoles(List<String> roles);
 
     /**
      * Get logged in user name
