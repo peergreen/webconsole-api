@@ -8,16 +8,25 @@ import com.vaadin.ui.Window;
  * Notification Overlay
  * @author Mohammed Boukada
  */
-public class NotificationOverlay extends Window {
+public class HelpOverlay extends Window {
+
+    private boolean seen = false;
 
     /**
      * Notification overlay constructor
      */
-    public NotificationOverlay() {
+    public HelpOverlay() {
         setContent(new CssLayout());
         setPrimaryStyleName("help-overlay");
         setDraggable(false);
         setResizable(false);
+        center();
+        addCloseListener(new CloseListener() {
+            @Override
+            public void windowClose(CloseEvent e) {
+                seen = true;
+            }
+        });
     }
 
     /**
@@ -28,4 +37,7 @@ public class NotificationOverlay extends Window {
         ((CssLayout) getContent()).addComponent(c);
     }
 
+    public boolean isSeen() {
+        return seen;
+    }
 }

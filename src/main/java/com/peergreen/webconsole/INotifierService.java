@@ -10,10 +10,9 @@ public interface INotifierService {
      * Add an overlay
      * @param caption
      * @param text
-     * @param style
      * @return
      */
-    NotificationOverlay addOverlay(String caption, String text, String style);
+    HelpOverlay createHelpOverlay(String caption, String text);
 
     /**
      * Close all overlays
