@@ -1,4 +1,4 @@
-package com.peergreen.webconsole.vaadin;
+package com.peergreen.webconsole.vaadin.tabs;
 
 import com.peergreen.webconsole.INotifierService;
 import com.vaadin.ui.Component;
