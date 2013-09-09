@@ -5,11 +5,13 @@ import java.io.InputStream;
 
 /**
  * Css contribution service
+ *
  * @author Mohammed Boukada
  */
 public interface CssInjectorService {
     /**
      * Inject css
+     *
      * @param is css input stream
      * @return Css handler
      * @throws IOException
@@ -18,6 +20,7 @@ public interface CssInjectorService {
 
     /**
      * Inject css
+     *
      * @param cssContent css content
      * @return css handler
      */

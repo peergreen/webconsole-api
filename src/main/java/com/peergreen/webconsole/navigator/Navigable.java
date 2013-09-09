@@ -7,6 +7,7 @@ import java.lang.annotation.Target;
 
 /**
  * Define a navigable extension
+ *
  * @author Mohammed Boukada
  */
 @Target(ElementType.TYPE)

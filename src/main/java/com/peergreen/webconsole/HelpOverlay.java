@@ -6,6 +6,7 @@ import com.vaadin.ui.Window;
 
 /**
  * Notification Overlay
+ *
  * @author Mohammed Boukada
  */
 public class HelpOverlay extends Window {
@@ -31,6 +32,7 @@ public class HelpOverlay extends Window {
 
     /**
      * Add component
+     *
      * @param c
      */
     public void addComponent(Component c) {

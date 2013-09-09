@@ -15,5 +15,6 @@ import java.lang.annotation.Target;
 @Qualifier("tab")
 public @interface Tab {
     String value();
+
     String imgPath() default "";
 }

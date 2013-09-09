@@ -19,6 +19,7 @@ public final class UrlFragment {
      * Example <br/>
      * - Input : /frag1/frag2/frag3
      * - return : /frag1
+     *
      * @param s
      * @return
      */
@@ -35,6 +36,7 @@ public final class UrlFragment {
      * Example <br/>
      * - Input : /frag1/frag2/frag3
      * - return : /frag2/frag3
+     *
      * @param s
      * @return
      */

@@ -11,6 +11,7 @@ import java.io.Serializable;
 
 /**
  * Confirm dialog component
+ *
  * @author Mohammed Boukada
  */
 public class ConfirmDialog extends DefaultWindow {
@@ -21,6 +22,7 @@ public class ConfirmDialog extends DefaultWindow {
 
     /**
      * Confirmation listener
+     *
      * @author Mohammed Boukada
      */
     public interface Listener extends Serializable {
@@ -31,7 +33,8 @@ public class ConfirmDialog extends DefaultWindow {
 
     /**
      * Show confirm dialog
-     * @param parent parent UI to attach the confirm dialog window
+     *
+     * @param parent   parent UI to attach the confirm dialog window
      * @param listener confirmation listener
      */
     public static void show(UI parent, Listener listener) {
@@ -40,8 +43,9 @@ public class ConfirmDialog extends DefaultWindow {
 
     /**
      * Show confirm dialog
-     * @param parent parent UI to attach the confirm dialog window
-     * @param content confirm dialog content
+     *
+     * @param parent   parent UI to attach the confirm dialog window
+     * @param content  confirm dialog content
      * @param listener confirmation listener
      */
     public static void show(UI parent, Component content, Listener listener) {
@@ -50,12 +54,13 @@ public class ConfirmDialog extends DefaultWindow {
 
     /**
      * Show confirm dialog
-     * @param parent parent UI to attach the confirm dialog window
+     *
+     * @param parent        parent UI to attach the confirm dialog window
      * @param windowCaption confirm dialog window caption
-     * @param content confirm dialog content
-     * @param okCaption confirm button caption
+     * @param content       confirm dialog content
+     * @param okCaption     confirm button caption
      * @param cancelCaption cancel button caption
-     * @param listener confirmation listener
+     * @param listener      confirmation listener
      */
     public static void show(UI parent, String windowCaption, Component content, String okCaption, String cancelCaption, Listener listener) {
         ConfirmDialog confirmDialog = ConfirmDialogFactory.create(windowCaption, content, okCaption, cancelCaption);
@@ -74,6 +79,7 @@ public class ConfirmDialog extends DefaultWindow {
 
     /**
      * Confirm dialog window factory
+     *
      * @author Mohammed Boukada
      */
     public static class ConfirmDialogFactory {

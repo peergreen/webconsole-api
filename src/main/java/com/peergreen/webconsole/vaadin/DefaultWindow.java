@@ -9,6 +9,7 @@ import com.vaadin.ui.Window;
 
 /**
  * Default Vaadin window component
+ *
  * @author Mohammed Boukada
  */
 public class DefaultWindow extends Window {

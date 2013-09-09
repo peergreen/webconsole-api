@@ -17,6 +17,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Scope tabs based implementation
+ *
  * @author Mohammed Boukada
  */
 public abstract class TabScope extends TabSheet {
@@ -60,7 +61,8 @@ public abstract class TabScope extends TabSheet {
 
     /**
      * Add extension tab
-     * @param tab extension
+     *
+     * @param tab        extension
      * @param properties extension properties
      */
     @Link("tab")
@@ -87,7 +89,8 @@ public abstract class TabScope extends TabSheet {
 
     /**
      * Remove extension tab
-     * @param tab extension
+     *
+     * @param tab        extension
      * @param properties extension properties
      */
     @Unlink("tab")
@@ -95,7 +98,7 @@ public abstract class TabScope extends TabSheet {
         removeComponent(tab);
         defaultTab.removeExtension((String) properties.get("tab.value"));
         String alias = (String) properties.get(Constants.EXTENSION_ALIAS);
-        if (alias != null && components.containsKey(alias)){
+        if (alias != null && components.containsKey(alias)) {
             if (navigable) {
                 selectedTabListener.removeLocation(tab);
             }
@@ -105,6 +108,7 @@ public abstract class TabScope extends TabSheet {
 
     /**
      * Get tabs
+     *
      * @return map of component and its alias
      */
     protected Map<String, Component> getComponents() {

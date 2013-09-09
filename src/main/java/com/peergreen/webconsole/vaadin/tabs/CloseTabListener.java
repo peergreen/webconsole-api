@@ -6,6 +6,7 @@ import com.vaadin.ui.TabSheet;
 
 /**
  * Default close tab listener
+ *
  * @author Mohammed Boukada
  */
 public class CloseTabListener implements TabSheet.CloseHandler {

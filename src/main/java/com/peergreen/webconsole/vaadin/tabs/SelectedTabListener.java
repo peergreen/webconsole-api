@@ -9,6 +9,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Default selected tab listener
+ *
  * @author Mohammed Boukada
  */
 public class SelectedTabListener implements TabSheet.SelectedTabChangeListener {
@@ -23,8 +24,9 @@ public class SelectedTabListener implements TabSheet.SelectedTabChangeListener {
 
     /**
      * Add extension location
+     *
      * @param extension extension object
-     * @param location extension path
+     * @param location  extension path
      */
     public void addLocation(Component extension, String location) {
         locations.put(extension, location);
@@ -32,6 +34,7 @@ public class SelectedTabListener implements TabSheet.SelectedTabChangeListener {
 
     /**
      * Remove extension location
+     *
      * @param extension extension object
      */
     public void removeLocation(Component extension) {
@@ -42,7 +45,7 @@ public class SelectedTabListener implements TabSheet.SelectedTabChangeListener {
 
     /**
      * {@inheritDoc} <br />
-     *
+     * <p/>
      * Call view navigator to navigate to the selected extension
      */
     @Override

@@ -14,6 +14,7 @@ import java.util.Map;
 
 /**
  * Default tab component for scope tab view
+ *
  * @author Mohammed Boukada
  */
 public class DefaultTab extends CssLayout {
@@ -26,6 +27,7 @@ public class DefaultTab extends CssLayout {
 
     /**
      * Create new default tab
+     *
      * @param tabs tab sheet where default tab will be added
      */
     public DefaultTab(TabSheet tabs) {
@@ -36,6 +38,7 @@ public class DefaultTab extends CssLayout {
 
     /**
      * Set Vaadin UI object
+     *
      * @param ui UI
      */
     public void setUi(UI ui) {
@@ -44,7 +47,8 @@ public class DefaultTab extends CssLayout {
 
     /**
      * Add extension shortcut to the default tab content
-     * @param extension extension object
+     *
+     * @param extension     extension object
      * @param extensionName extension name
      */
     public void addExtension(Component extension, final String extensionName) {
@@ -53,7 +57,8 @@ public class DefaultTab extends CssLayout {
 
     /**
      * Add extension shortcut to the default tab content
-     * @param extension extension object
+     *
+     * @param extension     extension object
      * @param extensionName extension name
      * @param extensionIcon extension icon
      */
@@ -91,6 +96,7 @@ public class DefaultTab extends CssLayout {
 
     /**
      * Remove extension from default tab content
+     *
      * @param extensionName extension name
      */
     public void removeExtension(final String extensionName) {

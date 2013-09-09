@@ -6,6 +6,7 @@ import java.lang.reflect.Method;
  * Navigable extension descriptor <br />
  * An {@link com.peergreen.webconsole.Extension} is navigable if it
  * is annotated with {@link com.peergreen.webconsole.navigator.Navigable}
+ *
  * @author Mohammed Boukada
  */
 public class NavigableModel {
@@ -17,10 +18,11 @@ public class NavigableModel {
 
     /**
      * Create a navigable model
-     * @param parent parent navigable model
-     * @param alias extension alias
+     *
+     * @param parent    parent navigable model
+     * @param alias     extension alias
      * @param extension extension object
-     * @param method called method to navigate
+     * @param method    called method to navigate
      */
     public NavigableModel(NavigableModel parent, String alias, Object extension, Method method) {
         this.parent = parent;
@@ -32,6 +34,7 @@ public class NavigableModel {
 
     /**
      * Get navigable extension
+     *
      * @return navigable extension
      */
     public Object getExtension() {
@@ -41,6 +44,7 @@ public class NavigableModel {
     /**
      * Get the method to call to navigate through the extension <br/>
      * This method should annotated with {@link com.peergreen.webconsole.navigator.Navigate}
+     *
      * @return called method to navigate
      */
     public Method getCallbackMethod() {
@@ -49,6 +53,7 @@ public class NavigableModel {
 
     /**
      * Get the full path, including parent(s) alias, to the navigable extension
+     *
      * @return full path
      */
     public String getFullPath() {

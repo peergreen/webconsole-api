@@ -13,5 +13,6 @@ import java.lang.annotation.Target;
 @Qualifier("scope")
 public @interface Scope {
     String value();
+
     String iconClass() default "";
 }

@@ -26,5 +26,5 @@ public interface Constants {
 
     String REQUIRES_FILTER = "requires.filters";
 
-    String STORAGE_DIRECTORY = System.getProperty("user.dir") + File.separator + "peergreen" + File.separator + "storage" + File.separator+  "webconsole" + File.separator;
+    String STORAGE_DIRECTORY = System.getProperty("user.dir") + File.separator + "peergreen" + File.separator + "storage" + File.separator + "webconsole" + File.separator;
 }
