@@ -14,6 +14,12 @@ import com.vaadin.ui.Window;
  */
 public class DefaultWindow extends Window {
 
+    /**
+     * Create a default window
+     * @param caption window caption
+     * @param content window content. Vaadin component
+     * @param footerButtons list of buttons in footer
+     */
     public DefaultWindow(String caption, Component content, Button... footerButtons) {
         setCaption(caption);
         setClosable(false);
