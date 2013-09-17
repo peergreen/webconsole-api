@@ -1,7 +1,7 @@
 package com.peergreen.webconsole.vaadin.tabs;
 
 import com.peergreen.webconsole.Constants;
-import com.peergreen.webconsole.INotifierService;
+import com.peergreen.webconsole.notifier.INotifierService;
 import com.peergreen.webconsole.Inject;
 import com.peergreen.webconsole.Link;
 import com.peergreen.webconsole.UIContext;

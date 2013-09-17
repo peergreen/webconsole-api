@@ -1,6 +1,6 @@
 package com.peergreen.webconsole.vaadin.tabs;
 
-import com.peergreen.webconsole.INotifierService;
+import com.peergreen.webconsole.notifier.INotifierService;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.TabSheet;
 
