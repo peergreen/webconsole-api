@@ -24,8 +24,8 @@ public interface Constants {
 
     String SCOPE_EXTENSION_POINT = "com.peergreen.webconsole.scope";
 
-    String SECURED_CONSOLE_PID = "com.peergreen.webconsole.secured";
-    String UNSECURED_CONSOLE_PID = "com.peergreen.webconsole.unsecured";
+    String PRODUCTION_MODE_CONSOLE_PID = "com.peergreen.webconsole.production";
+    String DEVELOPMENT_MODE_CONSOLE_PID = "com.peergreen.webconsole.development";
 
     String WEBCONSOLE_EXTENSION = "webconsole.extension";
     String EXTENSION_POINT = "extension.point";
