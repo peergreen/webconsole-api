@@ -12,6 +12,7 @@
 package com.peergreen.webconsole;
 
 import com.peergreen.webconsole.navigator.ViewNavigator;
+import com.peergreen.webconsole.security.ISecurityManager;
 import com.vaadin.ui.UI;
 
 /**

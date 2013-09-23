@@ -9,7 +9,7 @@
  * limitations under the License.
  */
 
-package com.peergreen.webconsole;
+package com.peergreen.webconsole.security;
 
 import java.util.List;
 
