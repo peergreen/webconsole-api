@@ -11,20 +11,20 @@
 
 package com.peergreen.webconsole.vaadin.tabs;
 
-import com.peergreen.webconsole.Constants;
-import com.peergreen.webconsole.notifier.INotifierService;
-import com.peergreen.webconsole.Inject;
-import com.peergreen.webconsole.Link;
-import com.peergreen.webconsole.UIContext;
-import com.peergreen.webconsole.Unlink;
-import com.vaadin.server.ClassResource;
-import com.vaadin.ui.Component;
-import com.vaadin.ui.TabSheet;
-
 import javax.annotation.PostConstruct;
 import java.util.Dictionary;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+
+import com.peergreen.webconsole.Constants;
+import com.peergreen.webconsole.Inject;
+import com.peergreen.webconsole.Link;
+import com.peergreen.webconsole.UIContext;
+import com.peergreen.webconsole.Unlink;
+import com.peergreen.webconsole.notifier.INotifierService;
+import com.vaadin.server.ClassResource;
+import com.vaadin.ui.Component;
+import com.vaadin.ui.TabSheet;
 
 /**
  * Scope tabs based implementation
@@ -48,6 +48,11 @@ public abstract class TabScope extends TabSheet {
     @Inject
     public void setUiContext(UIContext uiContext) {
         this.uiContext = uiContext;
+        if (this.navigable) {
+            selectedTabListener = new SelectedTabListener(uiContext.getViewNavigator());
+            selectedTabListener.addLocation(defaultTab, uiContext.getViewNavigator().getLocation(this.getClass().getName()));
+            addSelectedTabChangeListener(selectedTabListener);
+        }
     }
 
     @Inject
@@ -63,11 +68,6 @@ public abstract class TabScope extends TabSheet {
         setSizeFull();
         defaultTab.setUi(uiContext.getUI());
         addTab(defaultTab, name, null, 0);
-        if (this.navigable) {
-            selectedTabListener = new SelectedTabListener(uiContext.getViewNavigator());
-            selectedTabListener.addLocation(defaultTab, uiContext.getViewNavigator().getLocation(this.getClass().getName()));
-            addSelectedTabChangeListener(selectedTabListener);
-        }
     }
 
     /**
