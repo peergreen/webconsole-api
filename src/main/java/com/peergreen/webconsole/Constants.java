@@ -21,7 +21,7 @@ public interface Constants {
     String CONSOLE_NAME = "console.name";
     String CONSOLE_ALIAS = "console.alias";
     String CONSOLE_DOMAINS = "console.domains";
-    String ENABLE_SECURITY = "enable.security";
+    String SECURITY_SERVICE_PID = "security.service.pid";
     String DEFAULT_ROLES = "default.roles";
 
     String SCOPE_EXTENSION_POINT = "com.peergreen.webconsole.scope";
