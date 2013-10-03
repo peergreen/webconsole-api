@@ -23,7 +23,9 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Qualifier("scope")
 public @interface Scope {
-    String value();
+    String name();
+
+    String[] domains();
 
     String iconClass() default "";
 }

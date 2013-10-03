@@ -17,8 +17,10 @@ import java.io.File;
  * @author Mohammed Boukada
  */
 public interface Constants {
+    String CONSOLE_ID = "console.id";
     String CONSOLE_NAME = "console.name";
     String CONSOLE_ALIAS = "console.alias";
+    String CONSOLE_DOMAINS = "console.domains";
     String ENABLE_SECURITY = "enable.security";
     String DEFAULT_ROLES = "default.roles";
 

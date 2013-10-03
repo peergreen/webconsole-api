@@ -49,4 +49,10 @@ public interface UIContext {
      * @return UI id
      */
     String getUIId();
+
+    /**
+     * Get console id
+     * @return console id
+     */
+    String getConsoleId();
 }
