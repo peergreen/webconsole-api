@@ -40,11 +40,20 @@ public abstract class TabScope extends TabSheet {
     private SelectedTabListener selectedTabListener;
     private UIContext uiContext;
 
+    /**
+     * Tab scope constructor
+     * @param name      Scope name
+     * @param navigable Whether this scope is navigable
+     */
     protected TabScope(String name, boolean navigable) {
         this.name = name;
         this.navigable = navigable;
     }
 
+    /**
+     * Inject UI Context
+     * @param uiContext UI Context
+     */
     @Inject
     public void setUiContext(UIContext uiContext) {
         this.uiContext = uiContext;
@@ -55,6 +64,10 @@ public abstract class TabScope extends TabSheet {
         }
     }
 
+    /**
+     * Inject Notifier Service
+     * @param notifierService Notifier Service
+     */
     @Inject
     public void setNotifierService(INotifierService notifierService) {
         setCloseHandler(new CloseTabListener(notifierService));
